@@ -5,14 +5,18 @@ import NameArea from './components/NameArea';
 
 const App = () => {
   const [name, setName] = useState("");
+  const [furigana, setFurigana] = useState("");
 
   const onChangeName = (event) => setName(event.target.value);
+  const onChangeFurigana = (event) => setFurigana(event.target.value);
 
   return (
     <>
       <NameArea
         name={name}
-        onChange={onChangeName}
+        onChangeName={onChangeName}
+        furigana={furigana}
+        onChangeFurigana={onChangeFurigana}
       />
     </>
   )
