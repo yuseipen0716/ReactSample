@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Furigana } from './Furigana'
+import { FourDigit } from './FourDigit'
+import { TwoDigit } from './TwoDigit'
+import '../App.css';
 
 const dateLocate = {
   position: "absolute",
@@ -32,7 +35,11 @@ export const NameArea = (props) => {
     birthYear, onChangeBirthYear, birthMonth, onChangeBirthMonth, birthDate, onChangeBirthDate, age, onChangeAge, check, onClickCheckFirst, onClickCheckSecond} = props;
 
   const [furigana, setFurigana] = useState("");
+  const [fourDigit, setFourDigit] = useState("");
+  const [twoDigit, setTwoDigit] = useState("");
   const onChangeFurigana = (event) => setFurigana(event.target.value);
+  const onChangeFourDigit = (event) => setFourDigit(event.target.value);
+  const onChangeTwoDigit = (event) => setTwoDigit(event.target.value);
 
   const inputName = name !== '' ? {
     fontSize: "2.5rem",
@@ -40,14 +47,14 @@ export const NameArea = (props) => {
   } : {
     fontSize: "2.5rem",
   };
-  const inputTodayYear = todayYear !== '' ? {
-    width: "3rem",
-    border: "none",
-    marginRight: "1.5rem",
-  } : {
-    width: "3rem",
-    marginRight: "1.5rem",
-  }
+  // const inputTodayYear = todayYear !== '' ? {
+  //   width: "3rem",
+  //   border: "none",
+  //   marginRight: "1.5rem",
+  // } : {
+  //   width: "3rem",
+  //   marginRight: "1.5rem",
+  // }
   const inputTodayMonth = todayMonth !== '' ? {
     width: "1.5rem",
     border: "none",
@@ -109,24 +116,27 @@ export const NameArea = (props) => {
   return(
     <>
       <div style={dateLocate}>
-        <input
+        <FourDigit todayYear={fourDigit} />
+        {/* <input
           placeholder='2022'
           value={todayYear}
           onChange={onChangeTodayYear}
           style={inputTodayYear} 
-        />
-        <input
+        /> */}
+        <TwoDigit todayMonth={twoDigit} />
+        {/* <input
           placeholder='02'
           value={todayMonth}
           onChange={onChangeTodayMonth}
           style={inputTodayMonth} 
-        />
-        <input
-          placeholder='02'
-          value={todayDate}
-          onChange={onChangeTodayDate}
-          style={inputTodayDate} 
-        />
+        /> */}
+        <TwoDigit todayDate={twoDigit} />
+          {/* <input
+            placeholder='02'
+            value={todayDate}
+            onChange={onChangeTodayDate}
+            style={inputTodayDate} 
+          /> */}
       </div>
       <div style={furiganaLocate}>
         <Furigana furigana={furigana} onChangeFurigana={onChangeFurigana} />
@@ -140,30 +150,34 @@ export const NameArea = (props) => {
         />
       </div>
       <div style={birthdayLocate}>
-        <input
+        <FourDigit birthYear={fourDigit} />
+        {/* <input
           placeholder='1994'
           value={birthYear}
           onChange={onChangeBirthYear}
           style={inputBirthYear}
-        />
-        <input
+        /> */}
+        <TwoDigit birthMonth={twoDigit} />
+        {/* <input
           placeholder='11'
           value={birthMonth}
           onChange={onChangeBirthMonth}
           style={inputBirthMonth}
-        />
-        <input
+        /> */}
+        <TwoDigit birthMonth={twoDigit} />
+        {/* <input
           placeholder='22'
           value={birthDate}
           onChange={onChangeBirthDate}
           style={inputBirthDate}
-        />
-        <input
+        /> */}
+        <TwoDigit age={twoDigit} />
+        {/* <input
           placeholder='27'
           value={age}
           onChange={onChangeAge}
           style={inputAge}
-        />
+        /> */}
       </div>
       <div style={checkLocate}>
         <button style={checkbox} onClick={onClickCheckFirst}>{check === 0 || check === 2 ? "" : "✓"}</button>
