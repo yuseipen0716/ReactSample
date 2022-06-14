@@ -26,7 +26,7 @@ const checkLocate ={
   left: "35.6rem",
 }
 
-const NameArea = (props) => {
+export const NameArea = (props) => {
   const {todayYear, onChangeTodayYear, todayMonth, onChangeTodayMonth, todayDate, onChangeTodayDate, name, onChangeName, furigana, onChangeFurigana,
     birthYear, onChangeBirthYear, birthMonth, onChangeBirthMonth, birthDate, onChangeBirthDate, age, onChangeAge, check, onClickCheckFirst, onClickCheckSecond} = props;
   const inputName = name !== '' ? {
@@ -178,5 +178,3 @@ const NameArea = (props) => {
     </>
   )
 };
-
-export default NameArea;
