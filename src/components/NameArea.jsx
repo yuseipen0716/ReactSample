@@ -18,7 +18,7 @@ const nameLocate = {
 
 const NameArea = (props) => {
   const {name, onChangeName, furigana, onChangeFurigana} = props;
-  const inputName = name != '' ? {
+  const inputName = name !== '' ? {
     fontSize: "2rem",
     border: "none",
   } : {
