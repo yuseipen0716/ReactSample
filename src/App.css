@@ -1,11 +1,73 @@
 /* App */
 
 /* NameArea */
-.birthday{
-  margin-right: 2.5rem;
+.input-name{
+  font-size: 2.5rem;
+  width: 25rem;
+}
+.input-name-border-none{
+  font-size: 2.5rem;
+  width: 15rem;
+  border: none;
+}
+.four-digit{
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+.four-digit-border-none{
+  width: 3rem;
+  margin-right: 1.5rem;
+  border: none;
+}
+.two-digit{
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+.two-digit-border-none{
+  width: 1.5rem;
+  margin-right: 1.5rem;
+  border: none;
 }
 
-.age{
-  margin-right: 2.5rem;
-  margin-left: 5.5rem;
+
+/* locate */
+.date-locate{
+  position: absolute;
+  top: 6.4rem;
+  left: 30rem;
+}
+.furigana-locate{
+  position: absolute;
+  top: 8.5rem;
+  left: 13rem;
+}
+.name-locate{
+  position: absolute;
+  top: 12rem;
+  left: 12rem;
+}
+.birth-year-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 9.5rem;
+}
+.birth-month-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 15rem;
+}
+.birth-date-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 20rem;
+}
+.age-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 30rem;
+}
+.check-locate{
+  position: absolute;
+  top: 17rem;
+  left: 35.6rem;
 }

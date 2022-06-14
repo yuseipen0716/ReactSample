@@ -17,7 +17,23 @@ export const TwoDigit = (props) => {
       placeholder='xx'
       value={twoDigit}
       onChange={onChangeTwoDigit}
-      style={inputTwoDigit} 
+      className={twoDigit !== '' ? "two-digit-border-none" : "two-digit"}
     />
   )
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 日付の枠が表示されなくなってしまった件
+// CSS移行作業
+// リファクタリング

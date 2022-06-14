@@ -17,7 +17,7 @@ export const FourDigit = (props) => {
       placeholder='xxxx'
       value={fourDigit}
       onChange={onChangeFourDigit}
-      style={inputFourDigit} 
+      className={(fourDigit !== '' ? "four-digit-border-none" : "four-digit")}
     />
   )
 };
