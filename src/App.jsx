@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import NameArea from './components/NameArea';
+import { Image } from './components/Image';
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <>
+      <Image />
       <NameArea
         name={name}
         onChangeName={onChangeName}
