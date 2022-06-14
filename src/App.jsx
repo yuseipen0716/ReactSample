@@ -7,7 +7,6 @@ import { Image } from './components/Image';
 const App = () => {
   // NameArea
   const [name, setName] = useState("");
-  const [furigana, setFurigana] = useState("");
   const [todayYear, setTodayYear] = useState("");
   const [todayMonth, setTodayMonth] = useState("");
   const [todayDate, setTodayDate] = useState("");
@@ -17,7 +16,6 @@ const App = () => {
   const [age, setAge] = useState("");
   const [check, setCheck] = useState(0);
   const onChangeName = (event) => setName(event.target.value);
-  const onChangeFurigana = (event) => setFurigana(event.target.value);
   const onChangeTodayYear = (event) => setTodayYear(event.target.value);
   const onChangeTodayMonth = (event) => setTodayMonth(event.target.value);
   const onChangeTodayDate = (event) => setTodayDate(event.target.value);
@@ -38,8 +36,6 @@ const App = () => {
       <NameArea
         name={name}
         onChangeName={onChangeName}
-        furigana={furigana}
-        onChangeFurigana={onChangeFurigana}
         todayYear={todayYear}
         onChangeTodayYear={onChangeTodayYear}
         todayMonth={todayMonth}

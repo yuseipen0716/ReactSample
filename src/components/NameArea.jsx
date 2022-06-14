@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Furigana } from './Furigana'
 
 const dateLocate = {
   position: "absolute",
@@ -27,19 +28,17 @@ const checkLocate ={
 }
 
 export const NameArea = (props) => {
-  const {todayYear, onChangeTodayYear, todayMonth, onChangeTodayMonth, todayDate, onChangeTodayDate, name, onChangeName, furigana, onChangeFurigana,
+  const {todayYear, onChangeTodayYear, todayMonth, onChangeTodayMonth, todayDate, onChangeTodayDate, name, onChangeName,
     birthYear, onChangeBirthYear, birthMonth, onChangeBirthMonth, birthDate, onChangeBirthDate, age, onChangeAge, check, onClickCheckFirst, onClickCheckSecond} = props;
+
+  const [furigana, setFurigana] = useState("");
+  const onChangeFurigana = (event) => setFurigana(event.target.value);
+
   const inputName = name !== '' ? {
     fontSize: "2.5rem",
     border: "none",
   } : {
     fontSize: "2.5rem",
-  };
-  const inputFurigana = furigana !== '' ? {
-    fontSize: "1rem",
-    border: "none",
-  } : {
-    fontSize: "1rem",
   };
   const inputTodayYear = todayYear !== '' ? {
     width: "3rem",
@@ -130,12 +129,7 @@ export const NameArea = (props) => {
         />
       </div>
       <div style={furiganaLocate}>
-      <input
-        placeholder='フリガナを入力'
-        value={furigana}
-        onChange={onChangeFurigana}
-        style={inputFurigana}
-      />
+        <Furigana furigana={furigana} onChangeFurigana={onChangeFurigana} />
       </div>
       <div style={nameLocate}>
         <input
