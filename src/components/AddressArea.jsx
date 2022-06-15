@@ -16,6 +16,15 @@ export const AddressArea = () => {
       <div className="address-locate-first">
         <Address />
       </div>
+      <div className="furigana-locate-address-area-second">
+        <FuriganaLong />
+      </div>
+      <div className="postal-number-locate-second">
+        <PostalNumber />
+      </div>
+      <div className="address-locate-second">
+        <Address />
+      </div>
     </>
   )
 };

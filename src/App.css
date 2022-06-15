@@ -124,14 +124,29 @@
   top: 20.6rem;
   left: 11rem;
 }
+.furigana-locate-address-area-second{
+  position: absolute;
+  top: 28.2rem;
+  left: 11rem;
+}
 .postal-number-locate-first{
   position: absolute;
-  top: 22.45em;
+  top: 22.5rem;
+  left: 14rem;
+}
+.postal-number-locate-second{
+  position: absolute;
+  top: 30.3rem;
   left: 14rem;
 }
 .address-locate-first{
   position: absolute;
-  top: 24.1em;
+  top: 24.1rem;
+  left: 9rem;
+}
+.address-locate-second{
+  position: absolute;
+  top: 32rem;
   left: 9rem;
 }
 
@@ -142,5 +157,9 @@
   }
   .postal-number{
     border: none;
+  }
+  .address{
+    border: none;
+    outline: none;
   }
 }
