@@ -42,6 +42,17 @@
   background-color: rgba(255, 255, 255, .0);
 }
 
+/* AddressArea */
+.furigana-long{
+  font-size: 1rem;
+  width: 34rem;
+}
+.furigana-long-border-none{
+  font-size: 1rem;
+  width: 34rem;
+  border: none;
+}
+
 
 /* locate NameArea */
 .date-locate{
@@ -88,4 +99,11 @@
   position: absolute;
   top: 17rem;
   left: 40rem;
+}
+
+/* locate AddressArea */
+.furigana-locate-address-area-first{
+  position: absolute;
+  top: 20.6rem;
+  left: 11rem;
 }
