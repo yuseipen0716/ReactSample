@@ -28,6 +28,13 @@
   margin-right: 1.5rem;
   border: none;
 }
+.furigana{
+  font-size: 1rem;
+}
+.furigana-border-none{
+  font-size: 1rem;
+  border: none;
+}
 
 
 /* locate */
