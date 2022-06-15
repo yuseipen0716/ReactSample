@@ -59,6 +59,16 @@
   font-size: 1rem;
   border: none;
 }
+.address{
+  font-size: 1.3rem;
+  resize: none;
+}
+.address-border-none{
+  font-size: 1.3rem;
+  resize: none;
+  border: none;
+  outline: none;
+}
 
 
 /* locate NameArea */
@@ -114,10 +124,15 @@
   top: 20.6rem;
   left: 11rem;
 }
-.postal-number-first{
+.postal-number-locate-first{
   position: absolute;
   top: 22.45em;
   left: 14rem;
+}
+.address-locate-first{
+  position: absolute;
+  top: 24.1em;
+  left: 9rem;
 }
 
 @media print{

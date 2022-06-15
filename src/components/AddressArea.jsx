@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css';
+import { Address } from './Address';
 import { FuriganaLong } from './FuriganaLong';
 import { PostalNumber } from './PostalNumber';
 
@@ -9,8 +10,11 @@ export const AddressArea = () => {
       <div className="furigana-locate-address-area-first">
         <FuriganaLong />
       </div>
-      <div className="postal-number-first">
+      <div className="postal-number-locate-first">
         <PostalNumber />
+      </div>
+      <div className="address-locate-first">
+        <Address />
       </div>
     </>
   )
