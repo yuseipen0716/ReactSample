@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Furigana = (props) => {
+export const Furigana = () => {
   const [furigana, setFurigana] = useState("");
   const onChangeFurigana = (event) => setFurigana(event.target.value);
 
