@@ -2,18 +2,11 @@ import React from 'react'
 import { Furigana } from './Furigana'
 import { FourDigit } from './FourDigit'
 import { TwoDigit } from './TwoDigit'
+import { Check } from './Check'
 import '../App.css';
 
 export const NameArea = (props) => {
-  const {name, onChangeName, check, onClickCheckFirst, onClickCheckSecond} = props;
-
-  const checkbox = {
-    width: "2rem",
-    height: "1.8rem",
-    marginRight: "2.5rem",
-    border: "none",
-    backgroundColor: "rgba(255, 255, 255, .0)"
-  }
+  const {name, onChangeName} = props;
 
   return(
     <>
@@ -45,9 +38,11 @@ export const NameArea = (props) => {
       <div className="age-locate">
         <TwoDigit />
       </div>
-      <div className='check-locate'>
-        <button style={checkbox} onClick={onClickCheckFirst}>{check === 0 || check === 2 ? "" : "✓"}</button>
-        <button style={checkbox} onClick={onClickCheckSecond}>{check === 0 || check === 1 ? "" : "✓"}</button>
+      <div className='check-locate-name-area-male'>
+        <Check />
+      </div>
+      <div className="check-locate-name-area-female">
+        <Check />
       </div>
     </>
   )

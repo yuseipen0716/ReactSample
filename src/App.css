@@ -35,6 +35,12 @@
   font-size: 1rem;
   border: none;
 }
+.checkbox{
+  width: 2rem;
+  height: 1.8rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
 
 
 /* locate */
@@ -73,8 +79,13 @@
   top: 17.2rem;
   left: 30rem;
 }
-.check-locate{
+.check-locate-name-area-male{
   position: absolute;
   top: 17rem;
   left: 35.6rem;
+}
+.check-locate-name-area-female{
+  position: absolute;
+  top: 17rem;
+  left: 40rem;
 }
