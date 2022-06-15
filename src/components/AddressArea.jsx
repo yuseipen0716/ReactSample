@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css';
 import { Address } from './Address';
 import { FuriganaLong } from './FuriganaLong';
+import { PhoneNumber } from './PhoneNumber';
 import { PostalNumber } from './PostalNumber';
 
 export const AddressArea = () => {
@@ -24,6 +25,9 @@ export const AddressArea = () => {
       </div>
       <div className="address-locate-second">
         <Address />
+      </div>
+      <div className="phone-number-locate">
+        <PhoneNumber />
       </div>
     </>
   )

@@ -1,3 +1,8 @@
+/* general */
+ul{
+  list-style: none;
+}
+
 /* App */
 
 /* NameArea */
@@ -68,6 +73,17 @@
   resize: none;
   border: none;
   outline: none;
+}
+.phone-number{
+  font-size: 1rem;
+  width: 8rem;
+  margin-bottom: 0.5rem;
+}
+.phone-number-border-none{
+  font-size: 1rem;
+  width: 8rem;
+  margin-bottom: 0.5rem;
+  border: none;
 }
 
 
@@ -149,6 +165,11 @@
   top: 32rem;
   left: 9rem;
 }
+.phone-number-locate{
+  position: absolute;
+  top: 19.6rem;
+  left: 46rem;
+}
 
 @media print{
   /* 印刷時の設定はここに。入力必須でない欄の枠線を消すなどできます */
@@ -161,5 +182,8 @@
   .address{
     border: none;
     outline: none;
+  }
+  .phone-number{
+    border: none;
   }
 }
