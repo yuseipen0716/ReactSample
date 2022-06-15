@@ -1,39 +1,91 @@
-.App {
-  text-align: center;
+/* App */
+
+/* NameArea */
+.input-name{
+  font-size: 2.5rem;
+  width: 25rem;
+}
+.input-name-border-none{
+  font-size: 2.5rem;
+  width: 15rem;
+  border: none;
+}
+.four-digit{
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+.four-digit-border-none{
+  width: 3rem;
+  margin-right: 1.5rem;
+  border: none;
+}
+.two-digit{
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+.two-digit-border-none{
+  width: 1.5rem;
+  margin-right: 1.5rem;
+  border: none;
+}
+.furigana{
+  font-size: 1rem;
+}
+.furigana-border-none{
+  font-size: 1rem;
+  border: none;
+}
+.checkbox{
+  width: 2rem;
+  height: 1.8rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+/* locate */
+.date-locate{
+  position: absolute;
+  top: 6.4rem;
+  left: 30rem;
 }
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.furigana-locate{
+  position: absolute;
+  top: 8.5rem;
+  left: 13rem;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.name-locate{
+  position: absolute;
+  top: 12rem;
+  left: 12rem;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.birth-year-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 9.5rem;
+}
+.birth-month-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 15rem;
+}
+.birth-date-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 20rem;
+}
+.age-locate{
+  position: absolute;
+  top: 17.2rem;
+  left: 30rem;
+}
+.check-locate-name-area-male{
+  position: absolute;
+  top: 17rem;
+  left: 35.6rem;
+}
+.check-locate-name-area-female{
+  position: absolute;
+  top: 17rem;
+  left: 40rem;
 }
