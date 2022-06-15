@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const TwoDigit = (props) => {
-  const {twoDigit, onChangeTwoDigit} = props;
+  // const {twoDigit, onChangeTwoDigit} = props;
+  const [twoDigit, setTwoDigit] = useState("");
+  const onChangeTwoDigit = (event) => setTwoDigit(event.target.value);
 
   const inputTwoDigit = twoDigit !== '' ? {
     width: "1.5rem",

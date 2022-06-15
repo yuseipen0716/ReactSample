@@ -34,12 +34,12 @@ export const NameArea = (props) => {
   const {todayYear, onChangeTodayYear, todayMonth, onChangeTodayMonth, todayDate, onChangeTodayDate, name, onChangeName,
     birthYear, onChangeBirthYear, birthMonth, onChangeBirthMonth, birthDate, onChangeBirthDate, age, onChangeAge, check, onClickCheckFirst, onClickCheckSecond} = props;
 
-  const [furigana, setFurigana] = useState("");
-  const [fourDigit, setFourDigit] = useState("");
-  const [twoDigit, setTwoDigit] = useState("");
-  const onChangeFurigana = (event) => setFurigana(event.target.value);
-  const onChangeFourDigit = (event) => setFourDigit(event.target.value);
-  const onChangeTwoDigit = (event) => setTwoDigit(event.target.value);
+  // const [furigana, setFurigana] = useState("");
+  // const [fourDigit, setFourDigit] = useState("");
+  // const [twoDigit, setTwoDigit] = useState("");
+  // const onChangeFurigana = (event) => setFurigana(event.target.value);
+  // const onChangeFourDigit = (event) => setFourDigit(event.target.value);
+  // const onChangeTwoDigit = (event) => setTwoDigit(event.target.value);
 
   // const inputName = name !== '' ? {
   //   fontSize: "2.5rem",
@@ -116,12 +116,12 @@ export const NameArea = (props) => {
   return(
     <>
       <div className="date-locate">
-        <FourDigit todayYear={fourDigit} />
-        <TwoDigit todayMonth={twoDigit} />
-        <TwoDigit todayDate={twoDigit} />
+        <FourDigit />
+        <TwoDigit />
+        <TwoDigit />
       </div>
       <div className="furigana-locate">
-        <Furigana furigana={furigana}/>
+        <Furigana />
       </div>
       <div className="name-locate">
         <input
@@ -132,16 +132,16 @@ export const NameArea = (props) => {
         />
       </div>
       <div className="birth-year-locate">
-        <FourDigit birthYear={fourDigit} />
+        <FourDigit />
       </div>
       <div className="birth-month-locate">
-        <TwoDigit birthMonth={twoDigit} />
+        <TwoDigit />
       </div>
       <div className="birth-date-locate">
-        <TwoDigit birthDate={twoDigit} />
+        <TwoDigit />
       </div>
       <div className="age-locate">
-        <TwoDigit age={twoDigit} />
+        <TwoDigit />
       </div>
       <div className='check-locate'>
         <button style={checkbox} onClick={onClickCheckFirst}>{check === 0 || check === 2 ? "" : "✓"}</button>

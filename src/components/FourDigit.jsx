@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const FourDigit = (props) => {
-  const {fourDigit, onChangeFourDigit} = props;
+export const FourDigit = () => {
+  // const {fourDigit, onChangeFourDigit} = props;
+  const [fourDigit, setFourDigit] = useState("");
+  const onChangeFourDigit = (event) => setFourDigit(event.target.value);
 
   const inputFourDigit = fourDigit !== '' ? {
     width: "3rem",
