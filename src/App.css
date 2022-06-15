@@ -119,3 +119,13 @@
   top: 22.45em;
   left: 14rem;
 }
+
+@media print{
+  /* 印刷時の設定はここに。入力必須でない欄の枠線を消すなどできます */
+  .furigana-long{
+    border: none;
+  }
+  .postal-number{
+    border: none;
+  }
+}
