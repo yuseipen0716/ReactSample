@@ -52,6 +52,13 @@
   width: 34rem;
   border: none;
 }
+.postal-number{
+  font-size: 1rem;
+}
+.postal-number-border-none{
+  font-size: 1rem;
+  border: none;
+}
 
 
 /* locate NameArea */
@@ -106,4 +113,9 @@
   position: absolute;
   top: 20.6rem;
   left: 11rem;
+}
+.postal-number-first{
+  position: absolute;
+  top: 22.45em;
+  left: 14rem;
 }
