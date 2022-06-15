@@ -165,9 +165,14 @@ ul{
   top: 32rem;
   left: 9rem;
 }
-.phone-number-locate{
+.phone-number-locate-first{
   position: absolute;
   top: 19.6rem;
+  left: 46rem;
+}
+.phone-number-locate-second{
+  position: absolute;
+  top: 27.2rem;
   left: 46rem;
 }
 

@@ -26,7 +26,10 @@ export const AddressArea = () => {
       <div className="address-locate-second">
         <Address />
       </div>
-      <div className="phone-number-locate">
+      <div className="phone-number-locate-first">
+        <PhoneNumber />
+      </div>
+      <div className="phone-number-locate-second">
         <PhoneNumber />
       </div>
     </>

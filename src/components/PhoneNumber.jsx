@@ -45,3 +45,5 @@ export const PhoneNumber = () => {
     </>
   )
 };
+
+// TODO liの各要素をコンポーネントに切り分け、mapで表示するようにしたい。
