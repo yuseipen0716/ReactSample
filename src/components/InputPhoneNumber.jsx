@@ -14,9 +14,3 @@ export const InputPhoneNumber = () => {
     </li>
   )
 }
-
-
-
-
-
-// ここにPhoneNumberのバラを切り分けて、PhoneNumber.jsxの方で繰り返し処理、、みたいにしたい。
