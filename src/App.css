@@ -14,6 +14,7 @@ ul{
   font-size: 2.5rem;
   width: 15rem;
   border: none;
+  background-color: rgba(255, 255, 255, .0);
 }
 .four-digit{
   width: 3rem;
@@ -23,6 +24,7 @@ ul{
   width: 3rem;
   margin-right: 1.5rem;
   border: none;
+  background-color: rgba(255, 255, 255, .0);
 }
 .two-digit{
   width: 1.5rem;
@@ -32,6 +34,7 @@ ul{
   width: 1.5rem;
   margin-right: 1.5rem;
   border: none;
+  background-color: rgba(255, 255, 255, .0);
 }
 .furigana{
   font-size: 1rem;
@@ -39,6 +42,7 @@ ul{
 .furigana-border-none{
   font-size: 1rem;
   border: none;
+  background-color: rgba(255, 255, 255, .0);
 }
 .checkbox{
   width: 2rem;
@@ -86,6 +90,181 @@ ul{
   border: none;
 }
 
+/* HistoryArea */
+/* InputHistory17lines */
+.history-17lines-year{
+  width: 5.8rem;
+  height: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+.history-17lines-year-border-none{
+  font-size: 1.5rem;
+  width: 5.6rem;
+  height: 2.3rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.8rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.history-17lines-month{
+  width: 2.5rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.history-17lines-month-border-none{
+  font-size: 1.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.9rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.history-17lines{
+  width: 40.6rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+.history-17lines-border-none{
+  font-size: 1.5rem;
+  width: 40.6rem;
+  height: 2.3rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+/* InputHistory5lines */
+.history-5lines-year{
+  width: 5.8rem;
+  height: 2.5rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.history-5lines-year-border-none{
+  font-size: 1.5rem;
+  width: 5.6rem;
+  height: 2.8rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.8rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.4rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.history-5lines-month{
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.history-5lines-month-border-none{
+  font-size: 1.5rem;
+  width: 2.3rem;
+  height: 2.8rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.9rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.4rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.history-5lines{
+  width: 40.6rem;
+  height: 2.5rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.history-5lines-border-none{
+  font-size: 1.5rem;
+  width: 40.6rem;
+  height: 2.8rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+/* InputLicense */
+.license-year{
+  width: 5.8rem;
+  height: 1.7rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+.license-year-border-none{
+  font-size: 1.5rem;
+  width: 5.6rem;
+  height: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.8rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.license-month{
+  width: 2.5rem;
+  height: 1.7rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.license-month-border-none{
+  font-size: 1.5rem;
+  width: 2.3rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.9rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.license{
+  width: 40.6rem;
+  height: 1.7rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+.license-border-none{
+  font-size: 1.5rem;
+  width: 40.6rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0.29rem;
+  border: none;
+  background-color: rgba(255, 255, 255, .0);
+}
 
 /* locate NameArea */
 .date-locate{
@@ -176,19 +355,78 @@ ul{
   left: 46rem;
 }
 
+/* locate HistoryArea */
+.history-17lines-locate{
+  position: absolute;
+  top: 36.9rem;
+  left: 2.5rem;
+}
+.history-5lines-locate{
+  position: absolute;
+  top: 8.8rem;
+  left: 68rem;
+}
+
+/* locate LicenseArea */
+.license-locate{
+  position: absolute;
+  top: 27.8rem;
+  left: 68rem;
+}
+
 @media print{
   /* 印刷時の設定はここに。入力必須でない欄の枠線を消すなどできます */
   .furigana-long{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .postal-number{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .address{
     border: none;
     outline: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .phone-number{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-17lines{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-17lines-month{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-17lines-year{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-5lines{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-5lines-month{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-5lines-year{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .license{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .license-month{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .license-year{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
 }

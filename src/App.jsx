@@ -3,6 +3,7 @@ import './App.css';
 import { NameArea } from './components/NameArea';
 import { AddressArea } from './components/AddressArea';
 import { Image } from './components/Image';
+import { HistoryArea } from './components/HistoryArea';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         onChangeName={onChangeName}
       />
       <AddressArea />
+      <HistoryArea />
     </>
   )
 };
