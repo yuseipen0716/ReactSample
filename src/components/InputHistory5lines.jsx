@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const InputHistory = () => {
+export const InputHistory5lines = () => {
   const [year, setYear] = useState('');
   const [month, setMonth] = useState('');
   const [history, setHistory] = useState('');
@@ -13,17 +13,17 @@ export const InputHistory = () => {
       <input
         value={year}
         onChange={onChangeYear}
-        className={year !== '' ? "history-year-border-none" : "history-year"}
+        className={year !== '' ? "history-5lines-year-border-none" : "history-5lines-year"}
       />
       <input 
         value={month}
         onChange={onChangeMonth}
-        className={month !== '' ? "history-month-border-none" : "history-month"}
+        className={month !== '' ? "history-5lines-month-border-none" : "history-5lines-month"}
       />
       <input
         value={history}
         onChange={onChangeHistory}
-        className={history !== '' ? "history-border-none" : "history"}
+        className={history !== '' ? "history-5lines-border-none" : "history-5lines"}
       />
     </li>
   )

@@ -1,5 +1,7 @@
 import React from 'react'
-import { InputHistory } from './InputHistory';
+import { InputHistory17lines } from './InputHistory17lines';
+import { InputHistory5lines } from './InputHistory5lines';
+import { InputLicense } from './InputLicense';
 
 export const HistoryArea = () => {
   const firstHistories = [...Array(17)].map(x => "")
@@ -8,12 +10,34 @@ export const HistoryArea = () => {
 
   return (
     <>
-      <div className="first-history-locate">
+      <div className="history-17lines-locate">
         <ul>
           {
             firstHistories.map((history, index) => {
               return (
-                <InputHistory key={index} />
+                <InputHistory17lines key={index} />
+              )
+            })
+          }
+        </ul>
+      </div>
+      <div className="history-5lines-locate">
+        <ul>
+          {
+            secondHistories.map((history, index) => {
+              return (
+                <InputHistory5lines key={index} />
+              )
+            })
+          }
+        </ul>
+      </div>
+      <div className="license-locate">
+        <ul>
+          {
+            licenses.map((license, index) => {
+              return (
+                <InputLicense key={index} />
               )
             })
           }
