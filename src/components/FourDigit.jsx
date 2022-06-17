@@ -6,7 +6,6 @@ export const FourDigit = () => {
 
   return (
     <input
-      placeholder='xxxx'
       value={fourDigit}
       onChange={onChangeFourDigit}
       className={(fourDigit !== '' ? "four-digit-border-none" : "four-digit")}

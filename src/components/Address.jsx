@@ -8,7 +8,6 @@ export const Address = () => {
     <textarea
       cols="50"
       rows="2"
-      placeholder='住所を入力'
       value={address}
       onChange={onChangeAddress}
       className={address !== '' ? "address-border-none" : "address"}
