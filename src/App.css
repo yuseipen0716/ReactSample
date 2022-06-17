@@ -44,7 +44,7 @@ ul{
   width: 2rem;
   height: 1.8rem;
   border: none;
-  background-color: rgba(255, 255, 255, .0);
+  
 }
 
 /* AddressArea */
@@ -93,13 +93,17 @@ ul{
   align-items: center;
   text-align: center;
   margin-right: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 .history-year-border-none{
-  width: 5.8rem;
-  height: 2rem;
+  font-size: 1.5rem;
+  width: 5.6rem;
+  height: 2.3rem;
   align-items: center;
   text-align: center;
   margin-right: 0.8rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.26rem;
   border: none;
 }
 .history-month{
@@ -108,13 +112,17 @@ ul{
   text-align: center;
   align-items: center;
   margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 .history-month-border-none{
-  width: 2.5rem;
-  height: 2rem;
+  font-size: 1.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
   text-align: center;
   align-items: center;
   margin-right: 0.9rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.26rem;
   border: none;
 }
 .history{
@@ -122,12 +130,15 @@ ul{
   height: 2rem;
   text-align: center;
   align-items: center;
+  margin-bottom: 0.2rem;
 }
 .history-border-none{
+  font-size: 1.5rem;
   width: 40.6rem;
-  height: 2rem;
+  height: 2.3rem;
   text-align: center;
   align-items: center;
+  margin-bottom: 0.26rem;
   border: none;
 }
 
@@ -232,15 +243,31 @@ ul{
   /* 印刷時の設定はここに。入力必須でない欄の枠線を消すなどできます */
   .furigana-long{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .postal-number{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .address{
     border: none;
     outline: none;
+    background-color: rgba(255, 255, 255, .0);
   }
   .phone-number{
     border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-month{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
+  }
+  .history-year{
+    border: none;
+    background-color: rgba(255, 255, 255, .0);
   }
 }
