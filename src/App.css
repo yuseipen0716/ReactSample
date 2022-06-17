@@ -86,6 +86,51 @@ ul{
   border: none;
 }
 
+/* HistoryArea */
+.history-year{
+  width: 5.8rem;
+  height: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.3rem;
+}
+.history-year-border-none{
+  width: 5.8rem;
+  height: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-right: 0.8rem;
+  border: none;
+}
+.history-month{
+  width: 2.5rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.history-month-border-none{
+  width: 2.5rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.9rem;
+  border: none;
+}
+.history{
+  width: 40.6rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+}
+.history-border-none{
+  width: 40.6rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  border: none;
+}
+
 
 /* locate NameArea */
 .date-locate{
@@ -174,6 +219,13 @@ ul{
   position: absolute;
   top: 27.2rem;
   left: 46rem;
+}
+
+/* locate HistoryArea */
+.first-history-locate{
+  position: absolute;
+  top: 36.9rem;
+  left: 2.5rem;
 }
 
 @media print{
