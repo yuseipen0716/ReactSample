@@ -20,7 +20,6 @@ export const NameArea = (props) => {
       </div>
       <div className="name-locate">
         <input
-          placeholder='氏名を入力'
           value={name}
           onChange={onChangeName}
           className={name !== '' ? "input-name-border-none" : "input-name"}

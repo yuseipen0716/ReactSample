@@ -6,7 +6,6 @@ export const TwoDigit = (props) => {
 
   return (
     <input
-      placeholder='xx'
       value={twoDigit}
       onChange={onChangeTwoDigit}
       className={twoDigit !== '' ? "two-digit-border-none" : "two-digit"}

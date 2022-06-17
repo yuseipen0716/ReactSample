@@ -6,7 +6,6 @@ export const FuriganaLong = () => {
 
   return (
     <input
-      placeholder='フリガナを入力'
       value={furigana}
       onChange={onChangeFurigana}
       className={furigana !== '' ? "furigana-long-border-none" : "furigana-long"}

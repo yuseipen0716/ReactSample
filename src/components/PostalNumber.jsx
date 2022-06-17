@@ -6,7 +6,6 @@ export const PostalNumber = () => {
 
   return (
     <input
-      placeholder='半角数字とハイフン'
       value={postalNumber}
       onChange={onChangePostalNumber}
       className={postalNumber !== '' ? "postal-number-border-none" : "postal-number"}
