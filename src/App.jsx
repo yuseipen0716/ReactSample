@@ -5,6 +5,7 @@ import { AddressArea } from './components/AddressArea';
 import { Image } from './components/Image';
 import { HistoryArea } from './components/HistoryArea';
 import { TextArea } from './components/TextArea';
+import { MoreInfoArea } from './components/MoreInfoArea';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <AddressArea />
       <HistoryArea />
       <TextArea />
+      <MoreInfoArea />
     </>
   )
 };

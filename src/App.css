@@ -506,13 +506,50 @@ ul{
 /* locate TextArea */
 .text10lines-locate{
   position: absolute;
-  top: 53.1em;
+  top: 53.1rem;
   left: 72rem;
 }
 .text11lines-locate{
   position: absolute;
-  top: 67em;
+  top: 67rem;
   left: 72rem;
+}
+
+/* MoreInfoArea */
+.hour-locate{
+  position: absolute;
+  top: 80.6rem;
+  left: 82.5rem;
+}
+.minute-locate{
+  position: absolute;
+  top: 80.6rem;
+  left: 86.7rem;
+}
+.family-menber-locate{
+  position: absolute;
+  top: 80.6rem;
+  left: 112rem;
+}
+.partner-yes-locate{
+  position: absolute;
+  top: 83rem;
+  left: 78.6rem;
+}
+.partner-no-locate{
+  position: absolute;
+  top: 83rem;
+  left: 86.5rem;
+}
+.support-yes-locate{
+  position: absolute;
+  top: 83rem;
+  left: 108.9rem;
+}
+.support-no-locate{
+  position: absolute;
+  top: 83rem;
+  left: 116.7rem;
 }
 
 @media print{
