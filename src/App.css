@@ -355,6 +355,46 @@ ul{
   background-color: rgba(255, 255, 255, .0);
 }
 
+/* TextArea */
+.text10lines{
+  width: 51.5rem;
+  height: 12.5rem;
+  font-size: 1.1rem;
+  background-color: rgb(255, 220, 225, 0);
+  resize: none;
+  border: none;
+}
+.text10lines:hover{
+  background-color: rgb(255, 220, 225, .5);
+}
+.text10lines-border-none{
+  font-size: 1.1rem;
+  line-height: 1.15rem;
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+.text11lines{
+  width: 51.5rem;
+  height: 11rem;
+  font-size: 1.1rem;
+  background-color: rgb(255, 220, 225, 0);
+  resize: none;
+  border: none;
+}
+.text11lines:hover{
+  background-color: rgb(255, 220, 225, .5);
+}
+.text11lines-border-none{
+  font-size: 1.1rem;
+  line-height: 1.15rem;
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, .0);
+}
+
 /* locate NameArea */
 .date-locate{
   position: absolute;
@@ -461,6 +501,18 @@ ul{
   position: absolute;
   top: 27.8rem;
   left: 68rem;
+}
+
+/* locate TextArea */
+.text10lines-locate{
+  position: absolute;
+  top: 53.1em;
+  left: 72rem;
+}
+.text11lines-locate{
+  position: absolute;
+  top: 67em;
+  left: 72rem;
 }
 
 @media print{

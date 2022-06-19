@@ -4,6 +4,7 @@ import { NameArea } from './components/NameArea';
 import { AddressArea } from './components/AddressArea';
 import { Image } from './components/Image';
 import { HistoryArea } from './components/HistoryArea';
+import { TextArea } from './components/TextArea';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       />
       <AddressArea />
       <HistoryArea />
+      <TextArea />
     </>
   )
 };
