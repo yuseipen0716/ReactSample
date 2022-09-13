@@ -9,7 +9,8 @@ import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import PhotoUpload from './components/PhotoUpload';
-
+import { jsPDF } from 'jspdf';
+import * as html2canvas from 'html2canvas';
 
 const App = () => {
   // NameArea
