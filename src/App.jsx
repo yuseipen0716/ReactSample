@@ -8,6 +8,7 @@ import { TextArea } from './components/TextArea';
 import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
 import * as html2canvas from 'html2canvas';
+import PhotoUpload from './components/PhotoUpload';
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           name={name}
           onChangeName={onChangeName}
         />
+        <PhotoUpload />
         <AddressArea />
         <HistoryArea />
         <TextArea />
