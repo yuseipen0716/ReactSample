@@ -35,7 +35,7 @@ const PhotoUpload = () => {
 
   return (
     <>
-      <input className='photo-upload-locate' type="file" onChange={onChange} />
+      <input className='photo-upload-locate' type="file" onChange={onChange} data-html2canvas-ignore="true"/>
       {photo && <img src={photo} alt={name} className='photo-locate' />}
     </>
   )

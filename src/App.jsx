@@ -23,10 +23,10 @@ const App = () => {
       format: 'a4',
     });
     html2canvas(element, {scale: 2}).then((canvas) => {
-      const dataURI = canvas.toDataURL("image/jpeg");
+      const dataURI = canvas.toDataURL("image/png");
       document.body.appendChild(canvas);
       const width = doc.internal.pageSize.width;
-      doc.addImage(dataURI, 'JPEG', 0, 0, width, 0);
+      doc.addImage(dataURI, 'PNG', 0, 0, width, 0);
       doc.save("resume.pdf");
     });
   };

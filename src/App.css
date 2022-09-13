@@ -4,6 +4,11 @@ ul{
 }
 
 /* App */
+/* for-capture */
+#capture{
+  max-width: 1298px;
+  max-height: 919px;
+}
 
 /* NameArea */
 .input-name{
