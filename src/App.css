@@ -551,3 +551,23 @@ ul{
   top: 83rem;
   left: 116.7rem;
 }
+
+/* photo-upload */
+.photo-upload-locate{
+  position: absolute;
+  top: 4.6rem;
+  left: 47.7rem;
+}
+.photo-locate{
+  position: absolute;
+  top: 6.7rem;
+  left: 46.8rem;
+}
+
+@media print{
+  #header{display: none;}
+  #footer{display: none;}
+  .photo-upload-locate{
+    display: none;
+  }
+}

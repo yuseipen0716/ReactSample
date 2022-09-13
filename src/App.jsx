@@ -6,6 +6,7 @@ import { Image } from './components/Image';
 import { HistoryArea } from './components/HistoryArea';
 import { TextArea } from './components/TextArea';
 import { MoreInfoArea } from './components/MoreInfoArea';
+import PhotoUpload from './components/PhotoUpload';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         name={name}
         onChangeName={onChangeName}
       />
+      <PhotoUpload />
       <AddressArea />
       <HistoryArea />
       <TextArea />
