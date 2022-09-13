@@ -2,6 +2,24 @@
 ul{
   list-style: none;
 }
+/* font-regular */
+@font-face {
+  font-family: 'Nasu-Regular';
+  src: url('./fonts/Nasu-Regular.ttf');
+}
+/* font-bold */
+@font-face {
+  font-family: 'Nasu-Bold';
+  src: url('./fonts/Nasu-Bold.ttf');
+}
+body{
+  font-family: 'Nasu-Regular';
+}
+button, input, select, textarea{
+  font-family: inherit;
+  font-size: 100%;
+}
+
 
 /* App */
 
