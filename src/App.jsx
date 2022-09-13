@@ -17,16 +17,30 @@ const App = () => {
   const onClick = () => {
     const element = document.getElementById('capture');
     const doc = new jsPDF({
-      orientation: 'l',
-      format: 'a4',
+      orientation: 'landscape',
+      unit: 'px',
+      format: [1298, 919],
+      putOnlyUsedFonts: true,
     });
-    html2canvas(element, {scale: 2}).then((canvas) => {
-      const dataURI = canvas.toDataURL("image/png");
+    html2canvas(element, {scale: 2}).then(function(canvas){
+      const dataURI = canvas.toDataURL('image/jpeg');
       document.body.appendChild(canvas);
       const width = doc.internal.pageSize.width;
-      doc.addImage(dataURI, 'PNG', 0, 0, width, 0);
-      doc.save("resume.pdf");
-    });
+      doc.addImage(dataURI, 'JPEG', 10, 10, width, 0);
+      doc.save('resume.pdf')
+    })
+    // const element = document.getElementById('capture');
+    // const doc = new jsPDF({
+    //   orientation: 'l',
+    //   format: 'a4',
+    // });
+    // html2canvas(element, {scale: 2}).then((canvas) => {
+    //   const dataURI = canvas.toDataURL("image/png");
+    //   document.body.appendChild(canvas);
+    //   const width = doc.internal.pageSize.width;
+    //   doc.addImage(dataURI, 'PNG', 0, 0, width, 0);
+    //   doc.save("resume.pdf");
+    // });
   };
 
   return (
