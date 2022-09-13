@@ -9,14 +9,12 @@ import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import PhotoUpload from './components/PhotoUpload';
-import { jsPDF } from 'jspdf';
-import * as html2canvas from 'html2canvas';
 
 const App = () => {
   // NameArea
   const [name, setName] = useState("");
   const onChangeName = (event) => setName(event.target.value);
-  const onClick = (event) => {
+  const onClick = () => {
     const element = document.getElementById('capture');
     const doc = new jsPDF({
       orientation: 'l',
