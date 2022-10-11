@@ -1,4 +1,7 @@
 /* general */
+body{
+  font-family: sans-serif;
+}
 ul{
   list-style: none;
 }
@@ -14,6 +17,7 @@ ul{
 .input-name{
   font-size: 2.5rem;
   width: 25rem;
+  padding: 1rem 0;
   background-color: rgb(255, 220, 225, 0);
   border: none;
 }
@@ -22,8 +26,9 @@ ul{
 }
 .input-name-border-none{
   font-size: 2.5rem;
-  width: 15rem;
+  width: 25rem;
   border: none;
+  padding: 1rem 0;
   background-color: rgba(255, 255, 255, .0);
 }
 .four-digit{
@@ -413,7 +418,7 @@ ul{
 }
 .name-locate{
   position: absolute;
-  top: 12rem;
+  top: 11rem;
   left: 12rem;
 }
 .birth-year-locate{

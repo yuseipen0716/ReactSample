@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import './App.css';
 import { NameArea } from './components/NameArea';
 import { AddressArea } from './components/AddressArea';
@@ -7,45 +7,43 @@ import { HistoryArea } from './components/HistoryArea';
 import { TextArea } from './components/TextArea';
 import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
-import * as html2canvas from 'html2canvas';
+import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
 
 const App = () => {
   // NameArea
   const [name, setName] = useState("");
   const onChangeName = (event) => setName(event.target.value);
-  const onClick = () => {
-    const element = document.getElementById('capture');
-    const doc = new jsPDF({
+  const ref = useRef(null)
+  const onClick = useCallback(() => {
+    if (ref.current === null) {
+      return
+    }
+    const ignoreNode = document.getElementById('ignore-me')
+    const pdf = new jsPDF({
       orientation: 'landscape',
       unit: 'px',
       format: [1298, 919],
       putOnlyUsedFonts: true,
     });
-    html2canvas(element, {scale: 2}).then(function(canvas){
-      const dataURI = canvas.toDataURL('image/jpeg');
-      document.body.appendChild(canvas);
-      const width = doc.internal.pageSize.width;
-      doc.addImage(dataURI, 'JPEG', 10, 10, width, 0);
-      doc.save('resume.pdf')
-    })
-    // const element = document.getElementById('capture');
-    // const doc = new jsPDF({
-    //   orientation: 'l',
-    //   format: 'a4',
-    // });
-    // html2canvas(element, {scale: 2}).then((canvas) => {
-    //   const dataURI = canvas.toDataURL("image/png");
-    //   document.body.appendChild(canvas);
-    //   const width = doc.internal.pageSize.width;
-    //   doc.addImage(dataURI, 'PNG', 0, 0, width, 0);
-    //   doc.save("resume.pdf");
-    // });
-  };
+
+    toPng(ref.current, {
+      cacheBust: true,
+      filter: (node) => node !== ignoreNode,
+      })
+      .then((dataUrl) => {
+        const width = document.getElementById('capture').clientWidth
+        pdf.addImage(dataUrl, 'PNG', 0, 0, width, 0);
+        pdf.save('resume.pdf');
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [ref])
 
   return (
     <>
-      <div id='capture'>
+      <div ref={ref} id='capture'>
         <Image />
         <NameArea
           name={name}
@@ -58,7 +56,8 @@ const App = () => {
         <MoreInfoArea />
       </div>
       <div>
-        <button onClick={onClick}>PDFとして保存</button>
+        {/* 一旦pdf保存ボタン仮置き */}
+        <button onClick={onClick}>保存</button>
       </div>
     </>
   )
