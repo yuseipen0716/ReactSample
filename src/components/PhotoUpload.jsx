@@ -35,7 +35,7 @@ const PhotoUpload = () => {
 
   return (
     <>
-      <input className='photo-upload-locate ignore-me' id='ignore-me' type="file" onChange={onChange}/>
+      <input className='photo-upload-locate' id='ignore-me' type="file" onChange={onChange}/>
       {photo && <img src={photo} alt={name} className='photo-locate' />}
     </>
   )
