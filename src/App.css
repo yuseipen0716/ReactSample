@@ -1,6 +1,7 @@
 /* general */
 body{
   font-family: sans-serif;
+  line-height: 1.4;
 }
 ul{
   list-style: none;
@@ -32,7 +33,7 @@ ul{
   background-color: rgba(255, 255, 255, .0);
 }
 .four-digit{
-  width: 2.7rem;
+  width: 4rem;
   margin-right: 1.5rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
@@ -41,13 +42,13 @@ ul{
   background-color: rgb(255, 220, 225, .5);
 }
 .four-digit-border-none{
-  width: 3rem;
-  margin-right: 1.5rem;
+  width: 3.4rem;
+  margin-right: 1.8rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
 }
 .two-digit{
-  width: 1.3rem;
+  width: 2rem;
   margin-right: 1.5rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
@@ -56,7 +57,7 @@ ul{
   background-color: rgb(255, 220, 225, .5);
 }
 .two-digit-border-none{
-  width: 1.5rem;
+  width: 2rem;
   margin-right: 1.5rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
@@ -112,6 +113,7 @@ ul{
 }
 .address{
   font-size: 1.3rem;
+  width: 35rem;
   background-color: rgb(255, 220, 225, 0);
   resize: none;
   border: none;
@@ -121,6 +123,7 @@ ul{
 }
 .address-border-none{
   font-size: 1.3rem;
+  width: 45rem;
   resize: none;
   border: none;
   outline: none;
@@ -129,7 +132,6 @@ ul{
 .phone-number{
   font-size: 1rem;
   width: 8rem;
-  margin-bottom: 0.5rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
 }
@@ -139,9 +141,11 @@ ul{
 .phone-number-border-none{
   font-size: 1rem;
   width: 8rem;
-  margin-bottom: 0.5rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
+}
+.low-line-height{
+  line-height: 1.4;
 }
 
 /* HistoryArea */
@@ -198,10 +202,10 @@ ul{
 }
 .history-17lines{
   width: 40.6rem;
-  height: 2.2rem;
+  height: 2.4rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.44rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
 }
@@ -214,7 +218,7 @@ ul{
   height: 2.3rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.29rem;
+  margin-bottom: 0.48rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
 }
@@ -274,7 +278,7 @@ ul{
   height: 2.7rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
 }
@@ -287,7 +291,7 @@ ul{
   height: 2.8rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
 }
@@ -347,7 +351,7 @@ ul{
   height: 1.9rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   background-color: rgb(255, 220, 225, 0);
   border: none;
 }
@@ -360,7 +364,7 @@ ul{
   height: 2rem;
   text-align: center;
   align-items: center;
-  margin-bottom: 0.29rem;
+  margin-bottom: 0.5rem;
   border: none;
   background-color: rgba(255, 255, 255, .0);
 }
@@ -369,7 +373,7 @@ ul{
 .text10lines{
   width: 51.5rem;
   height: 12.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: rgb(255, 220, 225, 0);
   resize: none;
   border: none;
@@ -388,7 +392,7 @@ ul{
 .text11lines{
   width: 51.5rem;
   height: 11rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: rgb(255, 220, 225, 0);
   resize: none;
   border: none;
@@ -408,37 +412,37 @@ ul{
 /* locate NameArea */
 .date-locate{
   position: absolute;
-  top: 6.4rem;
+  top: 6.3rem;
   left: 30rem;
 }
 .furigana-locate{
   position: absolute;
-  top: 8.5rem;
+  top: 8.3rem;
   left: 13rem;
 }
 .name-locate{
   position: absolute;
-  top: 11rem;
+  top: 10.5rem;
   left: 12rem;
 }
 .birth-year-locate{
   position: absolute;
-  top: 17.2rem;
-  left: 9.5rem;
+  top: 16.8rem;
+  left: 9.3rem;
 }
 .birth-month-locate{
   position: absolute;
-  top: 17.2rem;
+  top: 16.8rem;
   left: 15rem;
 }
 .birth-date-locate{
   position: absolute;
-  top: 17.2rem;
+  top: 16.8rem;
   left: 20rem;
 }
 .age-locate{
   position: absolute;
-  top: 17.2rem;
+  top: 16.8rem;
   left: 30rem;
 }
 .check-locate-name-area-male{
@@ -455,22 +459,22 @@ ul{
 /* locate AddressArea */
 .furigana-locate-address-area-first{
   position: absolute;
-  top: 20.6rem;
+  top: 20.3rem;
   left: 11rem;
 }
 .furigana-locate-address-area-second{
   position: absolute;
-  top: 28.2rem;
+  top: 28rem;
   left: 11rem;
 }
 .postal-number-locate-first{
   position: absolute;
-  top: 22.5rem;
+  top: 22rem;
   left: 14rem;
 }
 .postal-number-locate-second{
   position: absolute;
-  top: 30.3rem;
+  top: 29.7rem;
   left: 14rem;
 }
 .address-locate-first{
@@ -485,32 +489,32 @@ ul{
 }
 .phone-number-locate-first{
   position: absolute;
-  top: 19.6rem;
+  top: 20rem;
   left: 46rem;
 }
 .phone-number-locate-second{
   position: absolute;
-  top: 27.2rem;
+  top: 27.6rem;
   left: 46rem;
 }
 
 /* locate HistoryArea */
 .history-17lines-locate{
   position: absolute;
-  top: 36.9rem;
-  left: 2.5rem;
+  top: 37.7rem;
+  left: 3rem;
 }
 .history-5lines-locate{
   position: absolute;
-  top: 8.8rem;
-  left: 68rem;
+  top: 9.9rem;
+  left: 68.6rem;
 }
 
 /* locate LicenseArea */
 .license-locate{
   position: absolute;
-  top: 27.8rem;
-  left: 68rem;
+  top: 28.9rem;
+  left: 68.3rem;
 }
 
 /* locate TextArea */
@@ -561,7 +565,6 @@ ul{
   top: 83rem;
   left: 116.7rem;
 }
-
 /* photo-upload */
 .photo-upload-locate{
   position: absolute;
@@ -573,11 +576,14 @@ ul{
   top: 6.7rem;
   left: 46.8rem;
 }
+.button-locate{
+  position: absolute;
+  top: 2.5rem;
+  left: 110rem;
+}
 
 @media print{
-  #header{display: none;}
-  #footer{display: none;}
-  .photo-upload-locate{
+  body{
     display: none;
   }
 }
