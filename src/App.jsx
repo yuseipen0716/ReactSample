@@ -18,31 +18,6 @@ const App = () => {
   const onChangeName = (event) => setName(event.target.value);
 
   const ref = useRef(null)
-  const onClick = useCallback(() => {
-    if (ref.current === null) {
-      return
-    }
-    const ignoreNode = document.getElementById('ignore-me');
-    const pdf = new jsPDF({
-      orientation: 'landscape',
-      unit: 'px',
-      format: [1298, 919],
-      putOnlyUsedFonts: true,
-    });
-
-    toPng(ref.current, {
-      cacheBust: true,
-      filter: (node) => node !== ignoreNode,
-      })
-      .then((dataUrl) => {
-        const width = document.getElementById('capture').clientWidth;
-        pdf.addImage(dataUrl, 'PNG', 0, 0, width, 0);
-        pdf.save('resume.pdf');
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [ref])
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -62,6 +37,7 @@ const App = () => {
     }
     message.success('登録に成功しました')
     const ignoreNode = document.getElementById('ignore-me');
+    const ignoreButton = document.getElementById('ignore-button');
     const pdf = new jsPDF({
       orientation: 'landscape',
       unit: 'px',
@@ -71,7 +47,7 @@ const App = () => {
 
     toPng(ref.current, {
       cacheBust: true,
-      filter: (node) => node !== ignoreNode,
+      filter: (node) => node !== ignoreNode && node !== ignoreButton
       })
       .then((dataUrl) => {
         const width = document.getElementById('capture').clientWidth;
@@ -98,10 +74,11 @@ const App = () => {
       <HistoryArea />
       <TextArea />
       <MoreInfoArea />
-      <div className='button-locate' id='ignore-me'>
+      <div className='button-locate'>
         <Button
           type='secondary'
           onClick={showModal}
+          id='ignore-button'
         >
           履歴書を保存する
         </Button>
