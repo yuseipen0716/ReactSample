@@ -575,9 +575,7 @@ ul{
 }
 
 @media print{
-  #header{display: none;}
-  #footer{display: none;}
-  .photo-upload-locate{
+  body{
     display: none;
   }
 }
