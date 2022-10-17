@@ -11,6 +11,8 @@ import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
 import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
+import db from './firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const App = () => {
   // NameArea
@@ -31,11 +33,17 @@ const App = () => {
   };
 
   const [form] = Form.useForm();
-  const onSubmit = useCallback(() => {
+  const onSubmit = useCallback((event) => {
+    addDoc(collection(db, 'users'), {
+      email: event['email'],
+      createdAt: serverTimestamp()
+    }).catch((err) =>{
+      console.error(err)
+    });
+
     if (ref.current === null) {
       return
     }
-    message.success('登録に成功しました')
     const ignoreNode = document.getElementById('ignore-me');
     const ignoreButton = document.getElementById('ignore-button');
     const pdf = new jsPDF({
@@ -50,6 +58,7 @@ const App = () => {
       filter: (node) => node !== ignoreNode && node !== ignoreButton
       })
       .then((dataUrl) => {
+        console.log(dataUrl)
         const width = document.getElementById('capture').clientWidth;
         pdf.addImage(dataUrl, 'PNG', 0, 0, width, 0);
         pdf.save('resume.pdf');
@@ -57,6 +66,7 @@ const App = () => {
       .catch((err) => {
         console.log(err)
       })
+    message.success('登録に成功しました')
   }, [ref])
   const onSubmitFailed = () => {
     message.error('登録に失敗しました');
@@ -96,7 +106,7 @@ const App = () => {
             form={form}
             layout='vertical'
             onFinish={onSubmit}
-            onFinishFailed={onSubmitFailed}
+            onFinishFailed={e => onSubmitFailed(e.target.value)}
             autoComplete='off'
           >
             <Form.Item
