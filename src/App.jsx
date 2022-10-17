@@ -58,7 +58,6 @@ const App = () => {
       filter: (node) => node !== ignoreNode && node !== ignoreButton
       })
       .then((dataUrl) => {
-        console.log(dataUrl)
         const width = document.getElementById('capture').clientWidth;
         pdf.addImage(dataUrl, 'PNG', 0, 0, width, 0);
         pdf.save('resume.pdf');
@@ -106,7 +105,7 @@ const App = () => {
             form={form}
             layout='vertical'
             onFinish={onSubmit}
-            onFinishFailed={e => onSubmitFailed(e.target.value)}
+            onFinishFailed={onSubmitFailed}
             autoComplete='off'
           >
             <Form.Item
