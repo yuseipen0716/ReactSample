@@ -13,7 +13,7 @@ import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
 import { db, storage } from './firebase';
 import { uploadBytes, ref as storageRef } from 'firebase/storage'
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 
 const App = () => {
   // NameArea
@@ -34,6 +34,7 @@ const App = () => {
   const ref = useRef(null)
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -46,18 +47,21 @@ const App = () => {
 
   const [form] = Form.useForm();
   const onSubmit = useCallback((event) => {
-    // cloud firestoreにname, email, timestampを保存する
-    addDoc(collection(db, 'users'), {
-      name: name,
-      email: event['email'],
-      createdAt: serverTimestamp()
-    }).catch((err) =>{
-      console.error(err)
-    });
-
     if (ref.current === null) {
       return
     }
+    // cloud firestoreにname, email, timestampを保存する
+    setDoc(doc(db, 'users', `${formatDatetime(new Date())}`), {
+      name: name,
+      email: event['email'],
+      createdAt: serverTimestamp()
+    }).then(() =>
+      setIsLoading(true)
+    ).catch((err) =>{
+      console.error(err)
+      setIsLoading(false);
+    });
+
     const ignoreNode = document.getElementById('ignore-me');
     const ignoreButton = document.getElementById('ignore-button');
     const pdf = new jsPDF({
@@ -80,16 +84,23 @@ const App = () => {
         // firebase storageへuploadするために、blob形式で出力
         const uploadFile = pdf.output('blob');
         uploadBytes(uploadPdfRef, uploadFile)
-          .then(() => console.log('upload完了'))
-          .catch((err) => console.error(err));
-        // 利用者の手元にもPDFファイルがダウンロードされる
-        pdf.save(`resume-${formatDatetime(new Date())}.pdf`)
+          .then(() => {
+            message.success('登録に成功しました')
+            // 利用者の手元にもPDFファイルがダウンロードされる
+            pdf.save(`resume-${formatDatetime(new Date())}.pdf`)
+            setIsLoading(false);
+            setIsModalOpen(false);
+          })
+          .catch((err) => {
+            console.error(err)
+            message.error('pdfの保存に失敗しました')
+            setIsLoading(false);
+          });
       })
       .catch((err) => {
         console.log(err)
+        setIsLoading(false);
       })
-    message.success('登録に成功しました');
-    setIsModalOpen(false);
   }, [ref, name])
   const onSubmitFailed = () => {
     message.error('登録に失敗しました');
@@ -148,7 +159,7 @@ const App = () => {
             </Form.Item>
             <Form.Item>
               <Space>
-                <Button type='primary' htmlType='submit'>
+                <Button type='primary' htmlType='submit' disabled={isLoading}>
                   PDFダウンロード
                 </Button>
               </Space>
