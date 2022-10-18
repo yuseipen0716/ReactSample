@@ -11,13 +11,25 @@ import { MoreInfoArea } from './components/MoreInfoArea';
 import { jsPDF } from 'jspdf';
 import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
-import db from './firebase';
+import { db, storage } from './firebase';
+import { uploadBytes, ref as storageRef } from 'firebase/storage'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const App = () => {
   // NameArea
   const [name, setName] = useState("");
   const onChangeName = (event) => setName(event.target.value);
+
+  const formatDatetime = (datetime) => {
+    const year = datetime.getFullYear();
+    const month = datetime.getMonth() + 1;
+    const date = datetime.getDate();
+    const hour = datetime.getHours();
+    const min = datetime.getMinutes();
+    const sec = datetime.getSeconds();
+
+    return `${year}-${month}-${date}-${hour}-${min}-${sec}`
+  }
 
   const ref = useRef(null)
 
@@ -34,7 +46,9 @@ const App = () => {
 
   const [form] = Form.useForm();
   const onSubmit = useCallback((event) => {
+    // cloud firestoreにname, email, timestampを保存する
     addDoc(collection(db, 'users'), {
+      name: name,
       email: event['email'],
       createdAt: serverTimestamp()
     }).catch((err) =>{
@@ -53,6 +67,9 @@ const App = () => {
       putOnlyUsedFonts: true,
     });
 
+    // cloud storageにuploadするためのreferenceを作成
+    const uploadPdfRef = storageRef(storage, `pdf/resume${formatDatetime(new Date())}.pdf`)
+
     toPng(ref.current, {
       cacheBust: true,
       filter: (node) => node !== ignoreNode && node !== ignoreButton
@@ -60,13 +77,20 @@ const App = () => {
       .then((dataUrl) => {
         const width = document.getElementById('capture').clientWidth;
         pdf.addImage(dataUrl, 'PNG', 0, 0, width, 0);
-        pdf.save('resume.pdf');
+        // firebase storageへuploadするために、blob形式で出力
+        const uploadFile = pdf.output('blob');
+        uploadBytes(uploadPdfRef, uploadFile)
+          .then(() => console.log('upload完了'))
+          .catch((err) => console.error(err));
+        // 利用者の手元にもPDFファイルがダウンロードされる
+        pdf.save(`resume-${formatDatetime(new Date())}.pdf`)
       })
       .catch((err) => {
         console.log(err)
       })
-    message.success('登録に成功しました')
-  }, [ref])
+    message.success('登録に成功しました');
+    setIsModalOpen(false);
+  }, [ref, name])
   const onSubmitFailed = () => {
     message.error('登録に失敗しました');
   };
