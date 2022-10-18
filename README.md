@@ -48,7 +48,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Firebase
 
 ### build 
-- .env.localにfirebaseのapiKeyなどの情報を記載
+- .env.localにfirebaseのapiKeyなどの情報を記載( firebaseのプロジェクトのページ >> プロジェクトの設定 >> マイアプリ の部分にAPIkeyなどが記載されている。 )
 - firebase login
 - yarn run build
 - firebase deploy
