@@ -12,7 +12,7 @@ import { jsPDF } from 'jspdf';
 import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
 import { db, storage } from './firebase';
-import { uploadBytes, ref as storageRef } from 'firebase/storage'
+import { uploadBytes, ref as storageRef, getDownloadURL } from 'firebase/storage'
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 
 const App = () => {
@@ -85,6 +85,21 @@ const App = () => {
         const uploadFile = pdf.output('blob');
         uploadBytes(uploadPdfRef, uploadFile)
           .then(() => {
+            getDownloadURL(uploadPdfRef)
+              .then((url) => {
+                const xhr = new XMLHttpRequest();
+                xhr.responseType = 'blob';
+                xhr.onload = (event) => {
+                  const blob = xhr.response;
+                };
+                xhr.open('GET', url);
+                xhr.send();
+                console.log(url) // これがダウンロードURL
+                //この部分でメール送信の文章作成関連の処理を記載？
+              })
+              .catch((err) => {
+                console.error(err)
+              });
             message.success('登録に成功しました')
             // 利用者の手元にもPDFファイルがダウンロードされる
             pdf.save(`resume-${formatDatetime(new Date())}.pdf`)
