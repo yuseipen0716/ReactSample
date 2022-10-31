@@ -2,7 +2,8 @@
 
 ## 環境構築
 - `cp .env.local.sample .env.local`
-- .env.localに必要な記述を追加する
+- .env.localに必要な記述を追加する( こちらの内容についてはご連絡ください )
+- `yarn install`
 - `yarn start`
 
 ### Firebase
