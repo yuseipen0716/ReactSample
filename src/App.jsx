@@ -12,8 +12,9 @@ import { jsPDF } from 'jspdf';
 import { toPng } from 'html-to-image';
 import PhotoUpload from './components/PhotoUpload';
 import { db, storage } from './firebase';
-import { uploadBytes, ref as storageRef } from 'firebase/storage'
+import { uploadBytes, ref as storageRef, getDownloadURL } from 'firebase/storage'
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { init, send } from 'emailjs-com'
 
 const App = () => {
   // NameArea
@@ -85,9 +86,37 @@ const App = () => {
         const uploadFile = pdf.output('blob');
         uploadBytes(uploadPdfRef, uploadFile)
           .then(() => {
+            getDownloadURL(uploadPdfRef)
+              .then((url) => {
+                const xhr = new XMLHttpRequest();
+                xhr.responseType = 'blob';
+                xhr.open('GET', url);
+                xhr.send();
+                const userId = process.env.REACT_APP_EMAILJS_USER_ID
+                const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID
+                const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+                if ( userId && serviceId && templateId ) {
+                  init(userId);
+
+                  const templateParams = {
+                    name: name,
+                    email: event['email'],
+                    downloadLink: url
+                  }
+
+                  send(serviceId, templateId, templateParams)
+                    .then(() => {
+                      message.success('ご登録いただいたアドレスにダウンロードリンクを送信しました')
+                    })
+                    .catch((err) => {
+                      console.error(err)
+                    });
+                }
+              })
+              .catch((err) => {
+                console.error(err)
+              });
             message.success('登録に成功しました')
-            // 利用者の手元にもPDFファイルがダウンロードされる
-            pdf.save(`resume-${formatDatetime(new Date())}.pdf`)
             setIsLoading(false);
             setIsModalOpen(false);
           })
